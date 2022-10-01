@@ -25,10 +25,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yv6-eW-aL0">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yv6-eW-aL0">
                                         <rect key="frame" x="0.0" y="57" width="253" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -38,12 +38,13 @@
                                 <buttonConfiguration key="configuration" style="plain" title="LOG IN"/>
                                 <connections>
                                     <action selector="logInButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="IoP-g6-9yL"/>
+                                    <segue destination="Jhs-t2-eaN" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="zLk-N8-Xs1"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ePe-tc-UYb">
                                 <rect key="frame" x="16" y="468.33333333333331" width="361" height="34.333333333333314"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-tL-2Nt">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-tL-2Nt">
                                         <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
@@ -97,37 +98,56 @@
                                 <rect key="frame" x="131" y="668.66666666666663" width="131" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <segue destination="9wJ-3P-5Db" kind="unwind" unwindAction="unwindFor:" id="yve-ed-l1R"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-33-GgL">
-                                <rect key="frame" x="16" y="169" width="361" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Kd-nyl">
-                                <rect key="frame" x="153.66666666666666" y="391" width="86" height="95"/>
+                                <rect key="frame" x="153.66666666666666" y="390.66666666666669" width="86" height="95.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fpK-VC-avc">
+                                <rect key="frame" x="16" y="166" width="361" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUF-1H-tcT">
+                                        <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-33-GgL">
+                                        <rect key="frame" x="160.33333333333337" y="0.0" width="200.66666666666663" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sDj-lq-mVO"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HTf-33-GgL" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="16" id="380-F4-JJ0"/>
+                            <constraint firstItem="fpK-VC-avc" firstAttribute="top" secondItem="sDj-lq-mVO" secondAttribute="top" constant="107" id="13s-vM-Y5x"/>
                             <constraint firstItem="hM2-Kd-nyl" firstAttribute="centerX" secondItem="sDj-lq-mVO" secondAttribute="centerX" id="4xf-aP-kZy"/>
-                            <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="HTf-33-GgL" secondAttribute="trailing" constant="16" id="FyI-7F-0px"/>
+                            <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="fpK-VC-avc" secondAttribute="trailing" constant="16" id="KtD-HL-CbS"/>
+                            <constraint firstItem="fpK-VC-avc" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="16" id="MXZ-Xw-cnR"/>
                             <constraint firstItem="hM2-Kd-nyl" firstAttribute="centerY" secondItem="sDj-lq-mVO" secondAttribute="centerY" id="ZR9-Sd-xgd"/>
                             <constraint firstItem="sDj-lq-mVO" firstAttribute="bottom" secondItem="Zxn-GD-eVz" secondAttribute="bottom" constant="115" id="cKc-EK-c5p"/>
-                            <constraint firstItem="HTf-33-GgL" firstAttribute="top" secondItem="sDj-lq-mVO" secondAttribute="top" constant="110" id="lzN-EN-gEV"/>
                             <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="Zxn-GD-eVz" secondAttribute="trailing" constant="131" id="moA-e6-4Ru"/>
                             <constraint firstItem="Zxn-GD-eVz" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="131" id="v7e-Cl-KW5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mfW-sc-2JC"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="HTf-33-GgL" id="nlo-9d-gn2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieo-e9-SGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9wJ-3P-5Db" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="730.53435114503816" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="723" y="-29"/>
         </scene>
     </scenes>
     <resources>
