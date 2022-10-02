@@ -11,7 +11,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
+        
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -31,13 +31,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotUserNameButtonDidTapped() {
         let title = "Ooops!"
-        let message = "Your name is Teacher 👨‍🏫"
+        let message = "Your name is Teacher"
         showAlert(with: title, and: message)
     }
     
     @IBAction func forgotPasswordButtonDidTapped() {
         let title = "Ooops!"
-        let message = "Your password is Swift 🧐"
+        let message = "Your password is Swift"
         showAlert(with: title, and: message)
     }
     

@@ -89,20 +89,20 @@
         <!--Welcome View Controller-->
         <scene sceneID="N02-4I-J8H">
             <objects>
-                <viewController id="Jhs-t2-eaN" customClass="WelcomeViewController" customModule="HW_2_6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Jhs-t2-eaN" customClass="WelcomeViewController" customModule="HW_2_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vZK-AZ-IS3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxn-GD-eVz">
-                                <rect key="frame" x="131" y="668.66666666666663" width="131" height="34.333333333333371"/>
+                                <rect key="frame" x="100" y="668.66666666666663" width="193" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
                                 <connections>
                                     <segue destination="9wJ-3P-5Db" kind="unwind" unwindAction="unwindFor:" id="yve-ed-l1R"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Kd-nyl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Kd-nyl">
                                 <rect key="frame" x="153.66666666666666" y="390.66666666666669" width="86" height="95.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
@@ -112,14 +112,14 @@
                                 <rect key="frame" x="16" y="166" width="361" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUF-1H-tcT">
-                                        <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-33-GgL">
-                                        <rect key="frame" x="160.33333333333337" y="0.0" width="200.66666666666663" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="111.33333333333333" y="0.0" width="249.66666666666669" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -135,8 +135,8 @@
                             <constraint firstItem="fpK-VC-avc" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="16" id="MXZ-Xw-cnR"/>
                             <constraint firstItem="hM2-Kd-nyl" firstAttribute="centerY" secondItem="sDj-lq-mVO" secondAttribute="centerY" id="ZR9-Sd-xgd"/>
                             <constraint firstItem="sDj-lq-mVO" firstAttribute="bottom" secondItem="Zxn-GD-eVz" secondAttribute="bottom" constant="115" id="cKc-EK-c5p"/>
-                            <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="Zxn-GD-eVz" secondAttribute="trailing" constant="131" id="moA-e6-4Ru"/>
-                            <constraint firstItem="Zxn-GD-eVz" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="131" id="v7e-Cl-KW5"/>
+                            <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="Zxn-GD-eVz" secondAttribute="trailing" constant="100" id="moA-e6-4Ru"/>
+                            <constraint firstItem="Zxn-GD-eVz" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="100" id="v7e-Cl-KW5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mfW-sc-2JC"/>
