@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="41w-Cz-Pm7">
-                                <rect key="frame" x="70" y="293" width="253" height="91"/>
+                                <rect key="frame" x="70" y="229" width="253" height="91"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4r-Xc-rmm">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="34"/>
@@ -33,7 +33,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-fu-JeW">
-                                <rect key="frame" x="100" y="409" width="193" height="34.333333333333314"/>
+                                <rect key="frame" x="100" y="355" width="193" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="LOG IN"/>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ePe-tc-UYb">
-                                <rect key="frame" x="16" y="468.33333333333331" width="361" height="34.333333333333314"/>
+                                <rect key="frame" x="16" y="414.33333333333331" width="361" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-tL-2Nt">
                                         <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="34.333333333333336"/>
@@ -69,10 +69,10 @@
                             <constraint firstItem="41w-Cz-Pm7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="1IV-ES-gl0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="41w-Cz-Pm7" secondAttribute="trailing" constant="70" id="2p0-nE-Gk2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ePe-tc-UYb" secondAttribute="trailing" constant="16" id="4d1-Lx-e1S"/>
-                            <constraint firstItem="6Ma-fu-JeW" firstAttribute="top" secondItem="41w-Cz-Pm7" secondAttribute="bottom" constant="25" id="FvR-ET-cXE"/>
+                            <constraint firstItem="6Ma-fu-JeW" firstAttribute="top" secondItem="41w-Cz-Pm7" secondAttribute="bottom" constant="35" id="FvR-ET-cXE"/>
                             <constraint firstItem="6Ma-fu-JeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="IRH-Vq-hlk"/>
                             <constraint firstItem="ePe-tc-UYb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OAX-gc-vwA"/>
-                            <constraint firstItem="41w-Cz-Pm7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="V8t-wu-amw"/>
+                            <constraint firstItem="41w-Cz-Pm7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="V8t-wu-amw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Ma-fu-JeW" secondAttribute="trailing" constant="100" id="Zhi-2d-LPw"/>
                             <constraint firstItem="ePe-tc-UYb" firstAttribute="top" secondItem="6Ma-fu-JeW" secondAttribute="bottom" constant="25" id="wZP-91-yHo"/>
                         </constraints>
@@ -112,13 +112,13 @@
                                 <rect key="frame" x="16" y="166" width="361" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUF-1H-tcT">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-33-GgL">
-                                        <rect key="frame" x="111.33333333333333" y="0.0" width="249.66666666666669" height="50"/>
+                                        <rect key="frame" x="133.66666666666663" y="0.0" width="227.33333333333337" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

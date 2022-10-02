@@ -11,9 +11,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-        
+    
+    private let userName = "Teacher"
+    private let password = "Swift"
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,20 +28,23 @@ class LoginViewController: UIViewController {
     @IBAction func logInButtonDidTapped() {
         let title = "Invalid login or password"
         let message = "Please, enter correct login and password"
-        if userNameTF.text != "Teacher" && passwordTF.text != "Swift" {
+        
+        if userNameTF.text == userName && passwordTF.text == password {
+            return
+        } else {
             showAlert(with: title, and: message)
         }
     }
     
     @IBAction func forgotUserNameButtonDidTapped() {
         let title = "Ooops!"
-        let message = "Your name is Teacher"
+        let message = "Your name is \(userName)"
         showAlert(with: title, and: message)
     }
     
     @IBAction func forgotPasswordButtonDidTapped() {
         let title = "Ooops!"
-        let message = "Your password is Swift"
+        let message = "Your password is \(password)"
         showAlert(with: title, and: message)
     }
     
