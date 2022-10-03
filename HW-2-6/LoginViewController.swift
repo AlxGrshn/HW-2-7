@@ -31,8 +31,10 @@ class LoginViewController: UIViewController {
         
         guard userNameTF.text == userName, passwordTF.text == password else {
             showAlert(with: title, and: message)
+            passwordTF.text = ""
             return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotUserNameButtonDidTapped() {
