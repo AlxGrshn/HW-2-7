@@ -5,9 +5,9 @@
 //  Created by Alexander Grishin on 05.10.2022.
 //
 
-struct Credentials {
+struct User {
     let userName = "Teacher"
     let password = "Swift"
+    
+    static let person = Person()
 }
-
-

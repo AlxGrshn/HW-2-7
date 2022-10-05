@@ -12,8 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "Teacher"
-    private let password = "Swift"
+    private let userInfo = User()
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -21,31 +20,43 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userName
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewControllers in
+            if let welcomeVC = viewControllers as? WelcomeViewController {
+                welcomeVC.userName = userInfo.userName
+            }
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = userInfo.userName
+        passwordTF.text = userInfo.password
     }
 
     @IBAction func logInButtonDidTapped() {
         let title = "Invalid login or password"
         let message = "Please, enter correct login and password"
         
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == userInfo.userName, passwordTF.text == userInfo.password else {
             showAlert(with: title, and: message)
             passwordTF.text = ""
             return
         }
-        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        performSegue(withIdentifier: "tabBarVC", sender: nil)
     }
     
     @IBAction func forgotUserNameButtonDidTapped() {
         let title = "Ooops!"
-        let message = "Your name is \(userName)"
+        let message = "Your name is \(userInfo.userName)"
         showAlert(with: title, and: message)
     }
     
     @IBAction func forgotPasswordButtonDidTapped() {
         let title = "Ooops!"
-        let message = "Your password is \(password)"
+        let message = "Your password is \(userInfo.password)"
         showAlert(with: title, and: message)
     }
     
