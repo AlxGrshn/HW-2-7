@@ -95,14 +95,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxn-GD-eVz">
-                                <rect key="frame" x="100" y="369.5" width="120" height="34.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
-                                <connections>
-                                    <segue destination="9wJ-3P-5Db" kind="unwind" unwindAction="unwindFor:" id="yve-ed-l1R"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Kd-nyl">
                                 <rect key="frame" x="117" y="212" width="86" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
@@ -120,6 +112,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxn-GD-eVz">
+                                <rect key="frame" x="100" y="444.5" width="120" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <segue destination="9wJ-3P-5Db" kind="unwind" unwindAction="unwindFor:" id="yve-ed-l1R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sDj-lq-mVO"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,8 +128,8 @@
                             <constraint firstItem="hM2-Kd-nyl" firstAttribute="centerX" secondItem="sDj-lq-mVO" secondAttribute="centerX" id="4xf-aP-kZy"/>
                             <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="fpK-VC-avc" secondAttribute="trailing" constant="16" id="KtD-HL-CbS"/>
                             <constraint firstItem="fpK-VC-avc" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="16" id="MXZ-Xw-cnR"/>
+                            <constraint firstItem="sDj-lq-mVO" firstAttribute="bottom" secondItem="Zxn-GD-eVz" secondAttribute="bottom" constant="40" id="R3C-l4-Gx2"/>
                             <constraint firstItem="hM2-Kd-nyl" firstAttribute="centerY" secondItem="sDj-lq-mVO" secondAttribute="centerY" id="ZR9-Sd-xgd"/>
-                            <constraint firstItem="sDj-lq-mVO" firstAttribute="bottom" secondItem="Zxn-GD-eVz" secondAttribute="bottom" constant="115" id="cKc-EK-c5p"/>
                             <constraint firstItem="sDj-lq-mVO" firstAttribute="trailing" secondItem="Zxn-GD-eVz" secondAttribute="trailing" constant="100" id="moA-e6-4Ru"/>
                             <constraint firstItem="Zxn-GD-eVz" firstAttribute="leading" secondItem="sDj-lq-mVO" secondAttribute="leading" constant="100" id="v7e-Cl-KW5"/>
                         </constraints>
@@ -264,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2qb-Pq-w4I">
-                                <rect key="frame" x="16" y="182" width="288" height="205"/>
+                                <rect key="frame" x="16" y="154.5" width="288" height="205"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2qb-Pq-w4I" secondAttribute="height" multiplier="288:205" id="VYF-sO-FUL"/>
@@ -277,9 +277,10 @@
                         <viewLayoutGuide key="safeArea" id="6Pb-2i-Cie"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Pb-2i-Cie" firstAttribute="trailing" secondItem="2qb-Pq-w4I" secondAttribute="trailing" constant="16" id="AY8-lF-fL5"/>
-                            <constraint firstItem="2qb-Pq-w4I" firstAttribute="leading" secondItem="6Pb-2i-Cie" secondAttribute="leading" constant="16" id="CAr-pK-r6O"/>
-                            <constraint firstItem="2qb-Pq-w4I" firstAttribute="top" secondItem="6Pb-2i-Cie" secondAttribute="top" constant="138" id="Fzo-q2-mJF"/>
+                            <constraint firstItem="2qb-Pq-w4I" firstAttribute="centerY" secondItem="6Pb-2i-Cie" secondAttribute="centerY" id="4iG-sA-5aa"/>
+                            <constraint firstItem="2qb-Pq-w4I" firstAttribute="centerX" secondItem="6Pb-2i-Cie" secondAttribute="centerX" id="8SG-By-gaR"/>
+                            <constraint firstItem="6Pb-2i-Cie" firstAttribute="trailing" secondItem="2qb-Pq-w4I" secondAttribute="trailing" constant="16" id="8iv-QL-ENn"/>
+                            <constraint firstItem="2qb-Pq-w4I" firstAttribute="leading" secondItem="6Pb-2i-Cie" secondAttribute="leading" constant="16" id="ile-49-kl8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S1P-KT-7kD"/>
