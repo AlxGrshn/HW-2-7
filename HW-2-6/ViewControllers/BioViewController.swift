@@ -22,6 +22,7 @@ class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         userImage.image = UIImage(named: personInfo.photoURL)
         
         nameLabel.text = "Имя: \(User.person.name)"
